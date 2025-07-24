@@ -297,7 +297,7 @@ body {
     }}
  @media (max-width: 768px) {
     .fixed-bottom-button {
-        right: 20px; /* במקום left: 10px, right: 10px */
+        right: 20px; 
         transform: none;
         text-align: center;
     }
