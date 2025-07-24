@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+      scroll-behavior: smooth;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     min-height: 100vh;
     line-height: 1.6;
 }
+
 
 .fixed-header {
     position: fixed;
@@ -87,11 +89,12 @@ body {
 
 .main-content {
     margin-top: 120px;
-    margin-right: 270px;
+    margin-right: 270px; /* התפריט רחב 250px + 20px מרווח */
     margin-bottom: 80px;
     padding: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* שונה מ-center ל-flex-start */
+    margin-left: 30px; /* הוספת מרווח מצד שמאל */
 }
 
 .events-container {
@@ -103,7 +106,6 @@ body {
     width: 100%;
 }
 
-/* כרטיסי אירועים */
 .event-card {
     background-color: #4a2c2a;
     border: 2px solid #8b5a3c;
@@ -115,6 +117,7 @@ body {
     display: flex;
     flex-direction: row;
     transition: transform 0.3s ease;
+    position: relative; /* רק זה נוסף לתיקון */
 }
 
 .event-card:hover {
