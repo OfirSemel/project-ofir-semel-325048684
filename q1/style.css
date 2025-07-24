@@ -13,7 +13,7 @@ h1 {
     font-weight: bold;
     margin: 30px 0 15px 0;
     text-shadow: 3px 3px 6px #00000026;
-    font-size: 2.8rem;
+    font-size: 45px;
     text-decoration: underline;
     text-decoration-color: #d6d6ff;
     text-decoration-thickness: 3px;
@@ -25,7 +25,7 @@ h3 {
    font-weight: 600;
    margin: 10px;
    margin-bottom: 20px;
-   font-size: 1.4rem;
+   font-size: 22px;
    background: #8e44ad1a;
    padding: 8px 15px;
    border-radius: 20px;
@@ -39,7 +39,7 @@ h3 {
 h2 {
     color: #ffffff;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 30px;
     margin: 50px 0 30px 0;
     padding: 20px;
     background-color: #d6d6ff;
@@ -110,7 +110,7 @@ p {
 .card:hover {
     transform: translateY(-12px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-    border-color: ebcfb7(255, 193, 7, 0.6);
+    border-color: #ebcfb7;
 }
 
 .card-img-top {
@@ -132,7 +132,7 @@ p {
 .card-title {
     color: #2c3e50;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 22px;
     margin-bottom: 12px;
     text-shadow: 1px 1px 2px #0000001a;
 }
@@ -140,7 +140,7 @@ p {
 .card-subtitle {
     color: #ffe0c4;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 18px;
     margin-bottom: 18px;
     background: rgba(230, 126, 34, 0.1);
     padding: 8px 12px;
@@ -151,7 +151,7 @@ p {
 .card-text {
     color: #34495e;
     line-height: 1.7;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -167,7 +167,7 @@ p {
     transition: all 0.4s ease;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-size: 0.9rem;
+    font-size: 14px;
     box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
     position: relative;
     overflow: hidden;
@@ -210,30 +210,31 @@ p {
 
 @media (max-width: 992px) {
     h1 {
-        font-size: 2.2rem;
+        font-size: 35px;
+        
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 24px;
         padding: 15px;
     }
 }
 
 @media (max-width: 768px) {
     .card-title {
-        font-size: 1.2rem;
+        font-size: 20px;
     }
     
     .card-text {
-        font-size: 0.95rem;
+        font-size: 15px;
     }
     
     h1 {
-        font-size: 2rem;
+        font-size: 30px;
     }
     
     h2 {
-        font-size: 1.3rem;
+        font-size: 20px;
         padding: 12px;
     }
     
@@ -243,6 +244,6 @@ p {
     
     .btn-primary {
         padding: 12px 24px;
-        font-size: 0.85rem;
+        font-size: 14px;
     }
 }
