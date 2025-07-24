@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>לוח בקרת תקלות בתעלות זמן</h1>
+            <button class="nav-btn" onclick="goToReportForm()">מעבר לטופס דיווח תקלה</button>
+        </header>
+
+        <div class="controls">
+            <div class="filter-section">
+                <label for="statusFilter">סינון לפי סטטוס:</label>
+                <select id="statusFilter" onchange="filterByStatus()">
+                    <option value="all">הכל</option>
+                    <option value="פתוחה">פתוחה</option>
+                    <option value="טופלה">טופלה</option>
+                </select>
+
+                <label for="issueFilter">סינון לפי סוג תקלה:</label>
+                <select id="issueFilter" onchange="filterByIssueType()">
+                    <option value="all">הכל</option>
+                    <option value="רעד">רעד</option>
+                    <option value="חור בזמן">חור בזמן</option>
+                    <option value="מפגש עם דינוזאור">מפגש עם דינוזאור</option>
+                    <option value="אחר">אחר</option>
+                </select>
+
+                <label for="timeFilter">סינון לפי זמן יעד:</label>
+                <select id="timeFilter" onchange="filterByTargetTime()">
+                    <option value="all">הכל</option>
+                    <option value="morning">בוקר (06:00-12:00)</option>
+                    <option value="afternoon">אחר הצהריים (12:00-18:00)</option>
+                    <option value="evening">ערב (18:00-24:00)</option>
+                    <option value="night">לילה (00:00-06:00)</option>
+                </select>
+
+                <button class="clear-filters-btn" onclick="clearFilters()">נקה סינונים</button>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-item">
+                    <span class="stat-label">סה"כ תקלות:</span>
+                    <span id="totalCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">תקלות פתוחות:</span>
+                    <span id="openCount" class="stat-value">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="incidents-container">
+            <div id="incidentsList" class="incidents-list">
+            </div>
+            <div id="noIncidents" class="no-incidents" style="display: none;">
+                <h3>אין תקלות מדווחות כרגע</h3>
+                <p>כל התקלות החדשות יופיעו כאן</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

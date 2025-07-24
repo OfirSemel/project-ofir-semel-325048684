@@ -1,28 +1,114 @@
 <!DOCTYPE html>
+
 <html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>דיווח תקלות בתעלות זמן</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1>מערכת דיווח תקלות בתעלות זמן</h1>
+            <h1>מערכת ממשלתית לדיווח על כשלים במעברי זמן</h1>
             <p>משרד הפנים - מחלקת מעברי זמן</p>
+            <button class="nav-btn" onclick="location.href='view.html'">מעבר ללוח תקלות זמן</button>
         </header>
-
         <main class="form-container">
             <form id="reportForm" class="report-form">
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="channelNumber">מספר תעלת זמן <span class="required">*</span></label>
-                        <input type="text" id="channelNumber" name="channelNumber" placeholder="הכנס מספר תעלה">
+                        <input type="text" id="channelNumber" name="channelNumber" placeholder="לדוגמא: TZ-2025-25">
                         <span class="error-message" id="channelNumberError"></span>
                     </div>
 
-                   
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="targetDate">תאריך יעד</label>
+                            <input type="text" id="targetDate" name="targetDate" placeholder="לדוגמא: 15/03/2024">
+                            <span class="error-message" id="targetDateError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="targetTime">שעת יעד</label>
+                            <input type="text" id="targetTime" name="targetTime" placeholder="לדוגמא: 14:30">
+                            <span class="error-message" id="targetTimeError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="actualDate">תאריך נחיתה בפועל</label>
+                            <input type="text" id="actualDate" name="actualDate" placeholder="לדוגמא: 15/03/2024">
+                            <span class="error-message" id="actualDateError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="actualTime">שעת נחיתה בפועל</label>
+                            <input type="text" id="actualTime" name="actualTime" placeholder="לדוגמא: 15:45">
+                            <span class="error-message" id="actualTimeError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="incidentType">סוג התקלה</label>
+                        <select id="incidentType" name="incidentType">
+                            <option value="">בחר סוג תקלה</option>
+                            <option value="tremor">רעד בתעלה</option>
+                            <option value="hole">חור בזמן</option>
+                            <option value="dinosaur">מפגש עם דינוזאור</option>
+                            <option value="other">אחר</option>
+                        </select>
+                        <span class="error-message" id="incidentTypeError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">תיאור מפורט של התקלה</label>
+                        <textarea id="description" name="description" rows="4" placeholder="תאר בפירוט את האירוע שחווית..."></textarea>
+                        <span class="error-message" id="descriptionError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="multipleTravelers">האם יותר מאדם אחד חצה את התעלה?</label>
+                        <select id="multipleTravelers" name="multipleTravelers">
+                            <option value="">בחר תשובה</option>
+                            <option value="yes">כן</option>
+                            <option value="no">לא</option>
+                            <option value="unknown">לא ידוע</option>
+                        </select>
+                        <span class="error-message" id="multipleTravelersError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="securityLevel">רמת אבטחה נוכחית <span class="required">*</span></label>
+                        <select id="securityLevel" name="securityLevel">
+                            <option value="">בחר רמת אבטחה</option>
+                            <option value="1">רמה 1 - נמוכה</option>
+                            <option value="2">רמה 2 - בינונית</option>
+                            <option value="3">רמה 3 - גבוהה</option>
+                            <option value="4">רמה 4 - קריטית</option>
+                            <option value="5">רמה 5 - חירום (דורש מספר תעלה עם המילה EMERGENCY)</option>
+                        </select>
+                        <span class="error-message" id="securityLevelError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">כתובת אימייל לדיווח חוזר <span class="required">*</span></label>
+                        <input type="text" id="email" name="email" placeholder="your.email@example.com">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                </div>
+
+                <div class="submit-section">
+                    <button type="submit" class="submit-btn">שלח דיווח</button>
+                </div>
+            </form>
+
+            <div id="successMessage" class="success-message hidden">
+                <h3>הדיווח נשלח בהצלחה!</h3>
+                <p>תקבל עדכון באימייל בתוך 24-48 שעות.</p>
+            </div>
         </main>
     </div>
 
