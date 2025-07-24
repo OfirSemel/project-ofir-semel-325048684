@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c1810;
+    color: #f4e4c1;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* כותרת קבועה */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #5d4037;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 28px;
+    color: #ffd700;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #e8d5b7;
+    font-style: italic;
+}
+
+/* תפריט צד קבוע */
+.side-menu {
+    position: fixed;
+    right: 0;
+    top: 100px;
+    width: 250px;
+    height: calc(100vh - 100px);
+    background-color: #3e2723;
+    border-left: 3px solid #8b5a3c;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 500;
+    padding: 30px 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-title {
+    font-size: 18px;
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #8b5a3c;
+    padding-bottom: 10px;
+}
+
+.menu-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #4a2c2a;
+    border: 1px solid #8b5a3c;
+    border-radius: 8px;
+    color: #f4e4c1;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.menu-category:hover {
+    background-color: #8b5a3c;
+    color: #ffffff;
+}
+
+/* תוכן ראשי */
+.main-content {
+    margin-top: 120px;
+    margin-right: 270px;
+    margin-bottom: 80px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* כרטיסי אירועים */
+.event-card {
+    background-color: #4a2c2a;
+    border: 2px solid #8b5a3c;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-image-container {
+    position: relative;
+    width: 250px;
+    height: 180px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.event-image-container:hover .event-image {
+    opacity: 0.7;
+}
+
+.magic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.event-image-container:hover .magic-overlay {
+    opacity: 1;
+}
+
+.event-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.event-name {
+    font-size: 20px;
+    color: #ffd700;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.event-organizer {
+    font-size: 14px;
+    color: #e8d5b7;
+    margin-bottom: 8px;
+}
+
+.event-time {
+    font-size: 14px;
+    color: #e8d5b7;
+    margin-bottom: 15px;
+}
+
+.event-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.event-tag.exclusive {
+    background-color: #8b0000;
+    color: #ffffff;
+}
+
+.event-tag.open {
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+.event-tag.special {
+    background-color: #ff6f00;
+    color: #ffffff;
+}
+
+.fixed-bottom-button {
+    position: fixed;
+    bottom: 20px;
+    right: 350px;
+    z-index: 1000;
+}
+
+.jump-to-top {
+    background-color: #8b5a3c;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+.jump-to-top:hover {
+    background-color: #5d4037;
+}
+
+/* רספונסיביות */
+@media (max-width: 1024px) {
+    .side-menu {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-right: 220px;
+    }
+    
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-image-container {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .side-menu {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 120px;
+        border-left: none;
+        border-bottom: 3px solid #8b5a3c;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .main-content {
+        margin-right: 0;
+        margin-top: 0;
+        padding: 20px;
+    }
+    
+    .main-title {
+        font-size: 22px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+    }
+    
+    .event-card {
+        max-width: 100%;
+    }
+    
+    .event-image-container {
+        height: 150px;
+    }}
