@@ -12,9 +12,6 @@ body {
     min-height: 100vh;
     line-height: 1.6;
 }
-
-
-
 .fixed-header {
     top: 0;
     left: 0;
@@ -298,15 +295,10 @@ body {
     .event-image-container {
         height: 150px;
     }}
-    @media (max-width: 768px) {
+ @media (max-width: 768px) {
     .fixed-bottom-button {
-        left: 10px;
-        right: 10px;
+        right: 20px; /* במקום left: 10px, right: 10px */
         transform: none;
         text-align: center;
-    }
-
-    .jump-to-top {
-        width: 100%;
     }
 }
