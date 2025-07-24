@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* כותרת קבועה */
 .fixed-header {
     position: fixed;
     top: 0;
@@ -42,7 +41,6 @@ body {
     font-style: italic;
 }
 
-/* תפריט צד קבוע */
 .side-menu {
     position: fixed;
     right: 0;
@@ -87,7 +85,6 @@ body {
     color: #ffffff;
 }
 
-/* תוכן ראשי */
 .main-content {
     margin-top: 120px;
     margin-right: 270px;
@@ -242,7 +239,6 @@ body {
     background-color: #5d4037;
 }
 
-/* רספונסיביות */
 @media (max-width: 1024px) {
     .side-menu {
         width: 200px;
