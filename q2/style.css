@@ -14,8 +14,8 @@ body {
 }
 
 
+
 .fixed-header {
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -228,6 +228,8 @@ body {
     z-index: 1000;
 }
 
+
+
 .jump-to-top {
     background-color: #8b5a3c;
     color: #ffffff;
@@ -296,3 +298,15 @@ body {
     .event-image-container {
         height: 150px;
     }}
+    @media (max-width: 768px) {
+    .fixed-bottom-button {
+        left: 10px;
+        right: 10px;
+        transform: none;
+        text-align: center;
+    }
+
+    .jump-to-top {
+        width: 100%;
+    }
+}
