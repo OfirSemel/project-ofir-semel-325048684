@@ -88,14 +88,14 @@ body {
 }
 
 .main-content {
-    margin-top: 120px;
-    margin-right: 270px; /* התפריט רחב 250px + 20px מרווח */
-    margin-bottom: 80px;
-    padding: 30px;
     display: flex;
-    justify-content: flex-start; /* שונה מ-center ל-flex-start */
-    margin-left: 30px; /* הוספת מרווח מצד שמאל */
+    justify-content: center;
+    padding: 30px;
+    margin-top: 120px;
+    margin-bottom: 80px;
 }
+
+
 
 .events-container {
     display: flex;
@@ -107,6 +107,7 @@ body {
 }
 
 .event-card {
+    direction: rtl;
     background-color: #4a2c2a;
     border: 2px solid #8b5a3c;
     border-radius: 12px;
@@ -117,7 +118,6 @@ body {
     display: flex;
     flex-direction: row;
     transition: transform 0.3s ease;
-    position: relative; /* רק זה נוסף לתיקון */
 }
 
 .event-card:hover {
@@ -167,11 +167,14 @@ body {
 }
 
 .event-details {
+    display: flex;
+    box-sizing: border-box; 
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
+    width: 100%;
 }
 
 .event-name {
