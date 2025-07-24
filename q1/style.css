@@ -1,8 +1,9 @@
 /* עיצוב כללי */
 body {
-    background-color: rgb(254, 222, 228);
+    background-color: #fedee4;
     font-family: 'Arial', sans-serif;
     padding: 20px 0;
+    margin-top: 20px;
 }
 
 
@@ -11,7 +12,7 @@ h1 {
     color: #2c3e50;
     font-weight: bold;
     margin: 30px 0 15px 0;
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+    text-shadow: 3px 3px 6px #00000026;
     font-size: 2.8rem;
     text-decoration: underline;
     text-decoration-color: #d6d6ff;
@@ -19,18 +20,20 @@ h1 {
 }
 
 h3 {
-    text-align: center;
-    color: #8e44ad;
-    font-weight: 600;
-    margin: 10px 0 20px 0;
-    font-size: 1.4rem;
-    background: rgba(142, 68, 173, 0.1);
-    padding: 8px 15px;
-    border-radius: 20px;
-    display: inline-block;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+   text-align: center;
+   color: #8e44ad;
+   font-weight: 600;
+   margin: 10px;
+   margin-bottom: 20px;
+   font-size: 1.4rem;
+   background: #8e44ad1a;
+   padding: 8px 15px;
+   border-radius: 20px;
+   display: inline-block;
+   width: fit-content;
+   position: absolute;
+   right: 20px;
+   top: 20px;
 }
 
 h2 {
@@ -42,8 +45,8 @@ h2 {
     background-color: #d6d6ff;
     border-radius: 25px;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 25px #e74c3c4d;
+    text-shadow: 2px 2px 4px #0000004d;
     position: relative;
     overflow: hidden;
 }
@@ -55,7 +58,7 @@ h2::before {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(90deg, transparent, #ffffff33, transparent);
     transition: left 0.5s;
 }
 
@@ -64,16 +67,22 @@ h2:hover::before {
 }
 
 p {
-    text-align: center;
-    color: #2c3e50;
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    line-height: 1.7;
-    font-weight: 500;
+   text-align: justify;
+   color: #2c3e50;
+   font-size: 25px;
+   margin: 25px auto;
+   line-height: 1.7;
+   font-weight: bold;
+   max-width: 800px;
 }
 
+.imgFes {
+   display: block;
+   margin: 0 auto;
+   height: 400px;
+}
 .card {
-    background: linear-gradient(135deg, rgb(255, 255, 196) 0%, rgb(255, 255, 224) 100%);
+    background: linear-gradient(135deg, #ffffc4 0%, #ffffe0 100%);
     border: 2px solid rgba(255, 193, 7, 0.3);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -117,7 +126,7 @@ p {
 
 .card-body {
     padding: 25px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffffff1a;
 }
 
 .card-title {
@@ -125,7 +134,7 @@ p {
     font-weight: bold;
     font-size: 1.4rem;
     margin-bottom: 12px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px #0000001a;
 }
 
 .card-subtitle {
@@ -171,7 +180,7 @@ p {
     left: 50%;
     width: 0;
     height: 0;
-    background: rgba(255, 255, 255, 0.3);
+    background: #ffffff4d;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: width 0.3s ease, height 0.3s ease;
@@ -184,7 +193,7 @@ p {
 
 .btn-primary:hover {
    
-    box-shadow: 0 10px 30px rgba(255, 82, 82, 0.4);
+    box-shadow: 0 10px 30px #ff525266;
     color: white;
     text-decoration: none;
 }
